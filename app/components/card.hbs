@@ -1,0 +1,13 @@
+<LinkTo @route="blog" @model={{@index}}
+    class="px-6 py-4 max-w-md border rounded-lg bg-gray-800 border-gray-700 hover:bg-gray-700 flex items-center justify-center">
+    <div class="h-full bg-white p-4 rounded-md w-full flex-col items-center">
+        <h5 class="mb-1 text-lg font-bold tracking-tight text:black">{{@title}}
+        </h5>
+        <span class="text-sm text-gray-600">{{@pubDate}}</span>
+        <div class="py-1 px-2">
+            {{#each @categories as |category|}}
+            <p class="text-sm text-black"> - {{category}}</p>
+            {{/each}}
+        </div>
+    </div>
+</LinkTo>
